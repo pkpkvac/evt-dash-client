@@ -8,7 +8,8 @@ export default function Page() {
   const supabase = createClient();
 
   useEffect(() => {
-    const handleInserts = (payload) => {
+    // TODO: type the payload
+    const handleInserts = (payload: any) => {
       console.log("Change received!", payload);
       setVehicleData(() => {
         return [payload.new];

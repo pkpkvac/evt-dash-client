@@ -51,20 +51,23 @@ export default function Page() {
   const updateMotorSpeed = async (speed: number) => {
     console.log("Updating motor speed to", speed);
     setMotorSpeed(speed); // Update the state immediately for UI responsiveness
-    await fetch("http://localhost:3001/api/update-motor-speed", {
-      // await fetch("https://evt-server-0f8f4eff5beb.herokuapp.com/api/update-motor-speed", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ speed }),
-    });
+    // await fetch("http://localhost:3001/api/update-motor-speed", {
+    await fetch(
+      "https://evt-server-0f8f4eff5beb.herokuapp.com/api/update-motor-speed",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ speed }),
+      }
+    );
   };
 
   const resetVehicle = async () => {
     console.log("Resetting vehicle");
-    await fetch("http://localhost:3001/api/reset", {
-      // await fetch("https://evt-server-0f8f4eff5beb.herokuapp.com/api/reset", {
+    // await fetch("http://localhost:3001/api/reset", {
+    await fetch("https://evt-server-0f8f4eff5beb.herokuapp.com/api/reset", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -74,8 +77,8 @@ export default function Page() {
 
   const rechargeVehicle = async () => {
     console.log("Recharging vehicle");
-    await fetch("http://localhost:3001/api/recharge", {
-      // await fetch("https://evt-server-0f8f4eff5beb.herokuapp.com/api/recharge", {
+    // await fetch("http://localhost:3001/api/recharge", {
+    await fetch("https://evt-server-0f8f4eff5beb.herokuapp.com/api/recharge", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

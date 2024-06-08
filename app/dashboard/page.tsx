@@ -84,7 +84,7 @@ export default function Page() {
   };
 
   return (
-    <div className="w-full px-32 py-20">
+    <div className="w-full px-32 py-20 max-w-[1400px]">
       <div className="flex flex-col">
         <div className="flex justify-between mb-20">
           <div className="flex gap-10">
